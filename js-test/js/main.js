@@ -21,3 +21,34 @@ for(let i=0; i < btnBorderRadius.length; i++) {
 
 // Aligns the buttons to be in one line
 btn[0].style.flexDirection = "row";
+
+
+// Header
+// Selectors for the elments inside the header
+const headerContainer = document.querySelector(".jumbotron");
+const headerParagraphs = document.querySelectorAll(".jumbotron p");
+const headerHr = document.querySelector(".jumbotron hr");
+const headerAnchor = document.querySelector(".jumbotron a");
+
+// Changes the elements alignment from left to right
+headerContainer.style.display = "flex";
+headerContainer.style.flexDirection = "column";
+headerContainer.style.alignItems = "flex-end";
+
+// Changes the color of the text and the hr to white
+headerContainer.style.color = "#fff";
+
+// Changes the background-color
+headerContainer.style.backgroundColor = "#6b757e";
+
+// Moves the paragraphs to the left alignment
+for(let i=0; i < headerParagraphs.length; i++) {
+    headerParagraphs[i].style.textAlign = "right";
+}
+
+// Makes the hr not disappear
+headerHr.style.width = "100%";
+
+// Changes the anchor tag color 
+headerAnchor.style.backgroundColor = "#27a844";
+headerAnchor.style.borderColor = "#27a844";

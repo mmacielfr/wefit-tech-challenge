@@ -83,3 +83,27 @@ for(let i=0; i < cards.length; i++) {
 
     }
 }
+
+
+// List
+// Grabs the lists elements
+const list = document.querySelector(".row .col-lg-4 ul");
+const listItem = document.querySelector(".row .col-lg-4 ul .active");
+
+// Fabricates list elements
+function createElement(text) {
+    let element = document.createElement('li');
+    element.innerText = text;
+    list.appendChild(element);
+    element.classList.add("list-group-item");
+}
+
+// Using the factory, makes two list items
+createElement("Quarto item");
+createElement("Quinto item");
+
+// Takes the active state out of an element
+listItem.classList.remove("active");
+
+// Adds an active state to the one before the last element
+document.querySelector(".row .col-lg-4 ul li:nth-last-child(2)").classList.add("active");

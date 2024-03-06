@@ -52,3 +52,34 @@ headerHr.style.width = "100%";
 // Changes the anchor tag color 
 headerAnchor.style.backgroundColor = "#27a844";
 headerAnchor.style.borderColor = "#27a844";
+
+
+// Cards
+// Selects the cards elements needed
+const cards = document.querySelectorAll(".card .card-body .card-title");
+const cardsContainer = document.querySelectorAll(".row .col-lg-3");
+const cardsLink = document.querySelectorAll(".card .card-body a");
+
+// Loops through every card and changes its oreder
+for(let i=0; i < cards.length; i++) {
+    if (cards[i].innerHTML == "Animais") {
+
+        // Changes the color of the link/button
+        cardsLink[i].style.backgroundColor = "#27a844";
+        cardsLink[i].style.borderColor = "#27a844";
+        cardsContainer[i].style.order = "6";
+
+    } else if (cards[i].innerHTML == "Tecnologia") {
+
+        cardsContainer[i].style.order = "10";
+
+    } else if (cards[i].innerHTML == "Pessoas") {
+
+        cardsContainer[i].style.order = "8";
+
+    } else if (cards[i].innerHTML == "Natureza") {
+
+        cardsContainer[i].style.order = "4";
+
+    }
+}
